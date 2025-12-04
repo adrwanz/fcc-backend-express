@@ -1,10 +1,19 @@
+require('dotenv').config();
 let express = require('express');
 let app = express();
 // Ejercicio 5: servir JSON en /json
-app.get("/json", (req, res) => {
+/*app.get("/json", (req, res) => {
   res.json({
     message: "Hello json"
   });
+});*/
+// Ejercicio 6: servir JSON en /json con variable de entorno
+app.get("/json", (req, res) => {
+  let message = "Hello json";
+  if (process.env.MESSAGE_STYLE === "uppercase") {
+    message = message.toUpperCase();
+  }
+  res.json({ message: message });
 });
 
 // Ejercicio: 4 servir activos estáticos desde la carpeta /public
