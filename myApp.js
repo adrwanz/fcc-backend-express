@@ -7,7 +7,7 @@ let app = express();
     message: "Hello json"
   });
 });*/
-// Ejercicio 6: servir JSON en /json con variable de entorno
+/*Ejercicio 6*/
 app.get("/json", (req, res) => {
   let message = "Hello json";
   if (process.env.MESSAGE_STYLE === "uppercase") {
@@ -28,11 +28,11 @@ app.get("/", (req, res) => {
 });
 
 // Ejercicio: 1 "Hello World"
-console.log("Hello World");
+/*console.log("Hello World");
 app.get("/json", (req, res) => {
   res.json({
     message: "Hello World"
   });
-});
+});*/
 
 module.exports = app;
