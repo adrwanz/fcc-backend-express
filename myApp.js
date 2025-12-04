@@ -1,3 +1,7 @@
+// ejercicio 9 Ruta de eco usando parámetro de ruta
+app.get('/:word/echo', (req, res) => {
+  res.json({ echo: req.params.word });
+});
 require('dotenv').config();
 let express = require('express');
 let app = express();
