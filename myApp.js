@@ -1,44 +1,11 @@
-console.log("Hola mundo");
 let express = require('express');
 let app = express();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- module.exports = app;
-
-app.get('/', function(req, res) {
-	res.send('Hello World');
+// Ejercicio: crear la ruta /json
+app.get("/json", (req, res) => {
+  res.json({
+    message: "Hello json"
+  });
 });
+
+module.exports = app;
